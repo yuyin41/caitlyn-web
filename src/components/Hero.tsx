@@ -31,26 +31,18 @@ export function Hero() {
   const year = 2026;
 
   return (
-    <section className="relative flex h-screen min-h-[640px] items-center justify-center bg-[#050505] text-[#EDEDED] py-40">
-     
-     
-      {/* Background video */}
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="absolute top-0 left-0 w-full h-full object-cover -z-20 opacity-50"
-  >
-    <source src="/videos/hero-showreel.mp4" type="video/mp4" />
-  </video>
-     
-     
-     {/* Cinematic dark background */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#1a1a1a_0%,_#0a0a0a_45%,_#050505_100%)]" />
+    <section className="relative flex h-screen min-h-[640px] items-center justify-center bg-[#050505] text-[#EDEDED] py-28 sm:py-32 lg:py-40 overflow-hidden">
+      {/* Cinematic spotlight background */}
+      <div
+        className="absolute inset-0 z-[-1] pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle at 50% -20%, rgba(120, 120, 120, 0.4) 0%, rgba(0, 0, 0, 1) 60%)",
+        }}
+      />
 
       {/* Content */}
-      <div className="relative z-10 flex max-w-5xl flex-col items-center px-6 text-center">
+      <div className="relative z-10 flex max-w-5xl flex-col items-center px-4 text-center sm:px-6">
         <motion.div
           variants={containerVariants}
           initial="hidden"

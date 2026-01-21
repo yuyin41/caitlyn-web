@@ -15,9 +15,9 @@ export function ProfileSection() {
   return (
     <section
       id="profile"
-      className="relative z-10 border-t border-transparent bg-transparent pb-40 pt-40 text-[#EDEDED] sm:pt-40"
+      className="relative z-10 border-t border-transparent bg-transparent pb-24 pt-28 text-[#EDEDED] sm:pb-32 sm:pt-32 lg:pb-40 lg:pt-40"
     >
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-6 lg:px-10">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-4 sm:px-6 lg:px-10">
         <motion.header
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

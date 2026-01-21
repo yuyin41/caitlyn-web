@@ -6,9 +6,9 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative z-10 border-t border-transparent bg-transparent pb-40 pt-40 text-[#EDEDED] sm:pt-40"
+      className="relative z-10 border-t border-transparent bg-transparent pb-24 pt-28 text-[#EDEDED] sm:pb-32 sm:pt-32 lg:pb-40 lg:pt-40"
     >
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-12 px-6 text-center">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-10 px-4 text-center sm:gap-12 sm:px-6">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export function ContactSection() {
         >
           <a
             href="mailto:huangzheng0905@gmail.com"
-            className="block border-b-2 border-transparent text-5xl font-serif text-[#EDEDED] transition-all duration-300 hover:border-[#EDEDED] sm:text-6xl md:text-7xl"
+            className="block border-b-2 border-transparent text-3xl font-serif text-[#EDEDED] transition-all duration-300 hover:border-[#EDEDED] sm:text-4xl md:text-5xl lg:text-6xl"
           >
             huangzheng0905@gmail.com
           </a>

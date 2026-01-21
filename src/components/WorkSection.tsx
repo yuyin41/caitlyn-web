@@ -129,9 +129,9 @@ export function WorkSection({ onCategoryInView }: WorkSectionProps) {
     <>
       <section
         id="work"
-        className="relative z-10 border-t border-transparent bg-transparent pb-40 pt-40 text-[#EDEDED] sm:pt-40"
+        className="relative z-10 border-t border-transparent bg-transparent pb-24 pt-28 text-[#EDEDED] sm:pb-32 sm:pt-32 lg:pb-40 lg:pt-40"
       >
-        <div className="mx-auto flex w-full max-w-[95%] flex-col gap-32 px-6 lg:px-10">
+        <div className="mx-auto flex w-full max-w-[95%] flex-col gap-24 px-4 sm:gap-28 sm:px-6 lg:gap-32 lg:px-10">
           {portfolioCategories.map((category) => (
             <CategorySection
               key={category.id}
@@ -152,18 +152,14 @@ export function WorkSection({ onCategoryInView }: WorkSectionProps) {
                 </span>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-6">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {category.projects.map((project, index) => (
-                  <div
+                  <ProjectCard
                     key={project.id}
-                    className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)]"
-                  >
-                    <ProjectCard
-                      project={project}
-                      index={index}
-                      onSelect={setSelectedProject}
-                    />
-                  </div>
+                    project={project}
+                    index={index}
+                    onSelect={setSelectedProject}
+                  />
                 ))}
               </div>
             </CategorySection>
@@ -350,9 +346,44 @@ function ProjectCard({ project, index, onSelect }: ProjectCardProps) {
             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-400 ease-[0.25,0.8,0.2,1] rounded-xl ${
               isHovering ? "opacity-100" : "opacity-0"
             }`}
-            muted
-            loop
-            playsInline
+            muted={true}
+            loop={true}
+            playsInline={true}
+            autoPlay={true}
+            preload="metadata"
+            onLoadStart={() =>
+              console.log("Loading preview video:", project.title, project.previewVideoUrl)
+            }
+            onLoadedMetadata={() =>
+              console.log("Video metadata loaded:", project.title)
+            }
+            onCanPlay={() =>
+              console.log("Video can play:", project.title)
+            }
+            onError={(e) => {
+              const error = e.currentTarget.error;
+              if (error) {
+                const errorMessages: Record<number, string> = {
+                  1: "MEDIA_ERR_ABORTED - Loading aborted",
+                  2: "MEDIA_ERR_NETWORK - Network error",
+                  3: "MEDIA_ERR_DECODE - Decode error (codec issue)",
+                  4: "MEDIA_ERR_SRC_NOT_SUPPORTED - Format not supported",
+                };
+                console.error(
+                  "VIDEO ERROR (preview):",
+                  project.title,
+                  "\n  Error Code:",
+                  error.code,
+                  errorMessages[error.code] || "Unknown error",
+                  "\n  Error Message:",
+                  error.message,
+                  "\n  Video URL:",
+                  project.previewVideoUrl
+                );
+              } else {
+                console.error("VIDEO ERROR (preview):", project.title, "Unknown error");
+              }
+            }}
           />
         )}
 

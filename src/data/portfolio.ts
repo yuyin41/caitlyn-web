@@ -100,7 +100,7 @@ export const portfolioCategories: PortfolioCategory[] = [
         // TODO: USER MUST MANUALLY PLACE 'misery.jpg' INSIDE THE '/public/thumbnails' FOLDER. The code cannot see files that are not there.
         thumbnail: "/thumbnails/misery.jpg",
         videoUrl: "https://youtu.be/iAL16NE247A",
-        previewVideoUrl: "https://youtu.be/iAL16NE247A",
+        previewVideoUrl: "/videos/misery-preview.mp4",
         description: "",
       },
       {
@@ -109,7 +109,7 @@ export const portfolioCategories: PortfolioCategory[] = [
         // TODO: USER MUST MANUALLY PLACE 'marriage.jpg' INSIDE THE '/public/thumbnails' FOLDER. The code cannot see files that are not there.
         thumbnail: "/thumbnails/marriage.jpg",
         videoUrl: "https://youtu.be/funUiUI3ECI",
-        previewVideoUrl: "",
+        previewVideoUrl: "/videos/marriage-preview.mp4",
         description: "",
       },
     ],
