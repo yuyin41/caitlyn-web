@@ -217,7 +217,7 @@ export function WorkSection({ onCategoryInView }: WorkSectionProps) {
                         src={selectedProject.videoUrl}
                         className="h-full w-full object-cover"
                         controls
-                        autoPlay
+                        playsInline
                       />
                     );
                   })()

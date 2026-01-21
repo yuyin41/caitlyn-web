@@ -31,16 +31,7 @@ export function Hero() {
   const year = 2026;
 
   return (
-    <section className="relative flex h-screen min-h-[640px] items-center justify-center bg-[#050505] text-[#EDEDED] py-28 sm:py-32 lg:py-40 overflow-hidden">
-      {/* Cinematic spotlight background */}
-      <div
-        className="absolute inset-0 z-[-1] pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle at 50% -20%, rgba(120, 120, 120, 0.4) 0%, rgba(0, 0, 0, 1) 60%)",
-        }}
-      />
-
+    <section className="relative flex h-screen min-h-[640px] items-center justify-center bg-black text-[#EDEDED] py-28 sm:py-32 lg:py-40 overflow-hidden">
       {/* Content */}
       <div className="relative z-10 flex max-w-5xl flex-col items-center px-4 text-center sm:px-6">
         <motion.div

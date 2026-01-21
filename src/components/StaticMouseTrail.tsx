@@ -13,7 +13,8 @@ export function StaticMouseTrail() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d", { alpha: false });
+    // Enable alpha so our radial falloff mask actually creates soft edges
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     // Set canvas size
@@ -29,15 +30,9 @@ export function StaticMouseTrail() {
       return start + (end - start) * factor;
     };
 
-    // Draw static noise at a specific position with soft edges
+    // Draw static noise at a specific position with soft, circular falloff
     const drawStaticAt = (x: number, y: number, radius: number, intensity: number) => {
       if (!ctx) return;
-
-      // Create radial gradient for soft edges
-      const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
-      gradient.addColorStop(0, `rgba(255, 255, 255, ${intensity})`);
-      gradient.addColorStop(0.5, `rgba(255, 255, 255, ${intensity * 0.5})`);
-      gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
 
       // Create noise pattern
       const imageData = ctx.createImageData(radius * 2, radius * 2);

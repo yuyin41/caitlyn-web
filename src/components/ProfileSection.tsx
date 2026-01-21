@@ -44,11 +44,14 @@ export function ProfileSection() {
               About Me
             </h2>
             <p className="text-sm leading-relaxed text-[#EDEDED] font-serif sm:text-base">
-              Motivated video editor with professional training in narrative
-              editing and hands-on experience in student film projects.
-              Currently pursuing a Master of Filmmaking (Editing) at Goldsmiths
-              University, following a Bachelor&apos;s in Media and Culture from
-              the University of Amsterdam.
+              a video editor based in London. I&apos;m drawn to storytelling
+              that feels subtle but powerful, whether it&apos;s a quiet reaction
+              beat or a sharp structural turn. Japanese drama is a big influence
+              on my sense of rhythm, and I also love edits that are bold,
+              playful, and emotionally honest. I enjoy turning raw footage into
+              a story with intention. Trained in professional post workflows,
+              I&apos;m Avid Media Composer Specialist certified. Feel free to
+              reach out for collaborations or opportunities.
             </p>
           </motion.div>
 
