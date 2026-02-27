@@ -60,7 +60,7 @@ function getEmbedForVideoUrl(
   if (videoId) {
     return {
       kind: "youtube",
-      src: `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=1&playsinline=1&rel=0&modestbranding=1`,
+      src: `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`,
     };
   }
 
@@ -205,7 +205,8 @@ export function WorkSection({ onCategoryInView }: WorkSectionProps) {
                           title={selectedProject.title}
                           src={embed.src}
                           className="h-full w-full border-0"
-                          allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
                           allowFullScreen
                           frameBorder="0"
                         />

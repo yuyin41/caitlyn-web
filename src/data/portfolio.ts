@@ -100,7 +100,7 @@ export const portfolioCategories: PortfolioCategory[] = [
         // TODO: USER MUST MANUALLY PLACE 'misery.jpg' INSIDE THE '/public/thumbnails' FOLDER. The code cannot see files that are not there.
         thumbnail: "/thumbnails/misery.jpg",
         videoUrl: "https://youtu.be/iAL16NE247A",
-        previewVideoUrl: "/videos/misery-preview.mp4",
+        previewVideoUrl: "/videos/previews/misery-preview.mp4",
         description: "",
       },
       {
@@ -109,7 +109,7 @@ export const portfolioCategories: PortfolioCategory[] = [
         // TODO: USER MUST MANUALLY PLACE 'marriage.jpg' INSIDE THE '/public/thumbnails' FOLDER. The code cannot see files that are not there.
         thumbnail: "/thumbnails/marriage.jpg",
         videoUrl: "https://youtu.be/funUiUI3ECI",
-        previewVideoUrl: "/videos/marriage-preview.mp4",
+        previewVideoUrl: "/videos/previews/marriage-preview.mp4",
         description: "",
       },
     ],
@@ -148,9 +148,24 @@ export const portfolioCategories: PortfolioCategory[] = [
         id: "kickstarter-video",
         title: "Kickstarter Video",
         thumbnail: "/thumbnails/kickstarter-video.jpg",
-        videoUrl: "",
-        previewVideoUrl: "",
+        videoUrl: "https://youtu.be/iX98Hy8P6Bg",
+        previewVideoUrl: "/videos/kickstarter.mp4",
         description: "",
+      },
+    ],
+  },
+  {
+    id: "trailer",
+    title: "Trailer",
+    roman: "V",
+    projects: [
+      {
+        id: "trailer-dun-do-bheal",
+        title: "Dun-Do-Bheal Trailer",
+        thumbnail: "/thumbnails/dun-do-bheal-trailer.jpg",
+        videoUrl: "https://youtu.be/e99Mg9mzYds",
+        previewVideoUrl: "/videos/previews/dundobheal.mp4",
+        description: "Trailer for Dun-Do-Bheal.",
       },
     ],
   },
