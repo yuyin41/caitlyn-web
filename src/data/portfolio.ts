@@ -169,5 +169,20 @@ export const portfolioCategories: PortfolioCategory[] = [
       },
     ],
   },
+  {
+    id: "ai-assisted-content-creation",
+    title: "AI Assisted Content Creation",
+    roman: "VI",
+    projects: [
+      {
+        id: "touching-the-real",
+        title: "Touching the Real",
+        thumbnail: "/thumbnails/touching-the-real.jpg",
+        videoUrl: "https://youtu.be/-kuGm46V6JA",
+        previewVideoUrl: "/videos/previews/touching-the-real-preview.mp4",
+        description: "",
+      },
+    ],
+  },
 ];
 

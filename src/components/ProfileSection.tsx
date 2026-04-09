@@ -9,6 +9,9 @@ const skills = [
   "DaVinci Resolve",
   "Narrative Storytelling",
   "2D & 3D Design (Blender, Figma)",
+  "Nano Bananapro",
+  "Veo3",
+  "Seedance",
 ];
 
 export function ProfileSection() {
